@@ -12,7 +12,6 @@ impl Solution {
             cnt += 1
         }
 
-        let res:bool = (cnt == 3);
-        return (res)
+        return (cnt == 3)
     }
 }
