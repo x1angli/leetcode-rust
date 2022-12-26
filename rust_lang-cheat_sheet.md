@@ -174,3 +174,14 @@ player_stats.entry("health").or_insert(100);
 player_stats.entry("mana").and_modify(|mana| *mana += 200).or_insert(100);
 
 ```
+
+### map / reduce / collect / apply 
+#### char counter for string
+```rust
+let text = String::from("hello from rust!");
+let result = "abcdefghijklmnopqrstuvwxyz"
+    .chars()
+    .map(|c| (c, text.matches(c).count()))
+    .collect::<std::collections::HashMap<_, _>>();
+println!("{:?}", result);
+ ```
